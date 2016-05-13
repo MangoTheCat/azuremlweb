@@ -8,8 +8,6 @@ requestService(newdata, url = NULL, region = "ussouthcentral", workspace,
   service, auth = NULL, details = TRUE)
 }
 \arguments{
-\item{newdata}{A data frame to send to the web service}
-
 \item{url}{If you supply the full URL then other options are not required}
 
 \item{region}{The Azure region, such as ussouthcentral, europewest}
@@ -18,9 +16,14 @@ requestService(newdata, url = NULL, region = "ussouthcentral", workspace,
 
 \item{service}{The service ID}
 
-\item{auth}{Authentication token. Careful not to save this anywhere and check your .Rhistory}
+\item{auth}{Authentication token. Careful not to save this anywhere and
+check your .Rhistory}
 
-\item{details}{Logical. If FALSE then column types are omitted from the response}
+\item{details}{Logical. If FALSE then column types are omitted from the
+response}
+
+\item{datasets}{A named list of data frames to send to the web service.
+The names must match the names of the web inputs in Azure, eg. list(WebInput = data.frame(x=1, y=2))}
 }
 \description{
 Make a POST request to AzureML service
