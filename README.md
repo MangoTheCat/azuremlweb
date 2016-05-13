@@ -29,3 +29,8 @@ resp <-  requestService(list(WebInput = data.frame(x=1:5, y=LETTERS[1:5])),
 ```
 
 The content parser is coming [#1](https://github.com/MangoTheCat/azuremlweb/issues/1)
+
+## License
+
+MIT © Mango Solutions
+
