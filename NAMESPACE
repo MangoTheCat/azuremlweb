@@ -2,5 +2,7 @@
 
 export(buildRequestList)
 export(buildURL)
+export(parseDataFrame)
+export(parseResponse)
 export(requestService)
 export(separateDataFrame)
