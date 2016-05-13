@@ -8,6 +8,7 @@
 *-Ex.R
 # RStudio files
 .Rproj.user/
+azuremlweb.Rproj
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
