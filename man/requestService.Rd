@@ -25,7 +25,19 @@ response}
 \item{datasets}{A named list of data frames to send to the web service.
 The names must match the names of the web inputs in Azure, eg. list(WebInput = data.frame(x=1, y=2))}
 }
+\value{
+An httr response object
+}
 \description{
 Make a POST request to AzureML service
+}
+\examples{
+\dontrun{
+requestService(list(WebInput = data.frame(x=1:5, y=LETTERS[1:5])),
+               region = "ussouthcentral",
+               workspace = "8550bbba99572fc47e18e5fdd53e43e2",
+               service = "4e7ebd7ad816cd9dd1cb1b17c4cdb0c7",
+               auth = "TVPYGwNeuZbQLWHjOEKzMWjVihThTcmsIdRRFkSsvHaFoxZcKTjdFmFPaIsfN+OEdoZlGttMJQrzUPOvvLeCej==")
+}
 }
 
