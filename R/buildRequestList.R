@@ -27,9 +27,10 @@ buildRequestList <- function(datasets) {
 #' @param dataset A data.frame
 #'
 #' @return list with the ColumnNames (char vector) and Values (char matrix)
+#' @export
 #'
 #' @examples
-#' oneDataSet(data.frame(x=1:5, y=LETTERS[1:5]))
+#' separateDataFrame(data.frame(x=1:5, y=LETTERS[1:5]))
 separateDataFrame <- function(dataset) {
   values <- as.matrix(dataset)
   dimnames(values) <- NULL

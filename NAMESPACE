@@ -3,3 +3,4 @@
 export(buildRequestList)
 export(buildURL)
 export(requestService)
+export(separateDataFrame)

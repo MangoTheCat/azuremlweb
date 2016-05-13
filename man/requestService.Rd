@@ -37,7 +37,7 @@ requestService(list(WebInput = data.frame(x=1:5, y=LETTERS[1:5])),
                region = "ussouthcentral",
                workspace = "8550bbba99572fc47e18e5fdd53e43e2",
                service = "4e7ebd7ad816cd9dd1cb1b17c4cdb0c7",
-               auth = "TVPYGwNeuZbQLWHjOEKzMWjVihThTcmsIdRRFkSsvHaFoxZcKTjdFmFPaIsfN+OEdoZlGttMJQrzUPOvvLeCej==")
+               auth = "xxxxxxxxxxxx==")
 }
 }
 

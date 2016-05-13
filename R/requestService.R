@@ -21,7 +21,7 @@
 #'                region = "ussouthcentral",
 #'                workspace = "8550bbba99572fc47e18e5fdd53e43e2",
 #'                service = "4e7ebd7ad816cd9dd1cb1b17c4cdb0c7",
-#'                auth = "TVPYGwNeuZbQLWHjOEKzMWjVihThTcmsIdRRFkSsvHaFoxZcKTjdFmFPaIsfN+OEdoZlGttMJQrzUPOvvLeCej==")
+#'                auth = "xxxxxxxxxxxx==")
 #' }
 requestService <- function(datasets, url = NULL, region = "ussouthcentral",
                            workspace=NULL, service=NULL, auth = NULL, details = TRUE) {

@@ -17,6 +17,6 @@ The values of the dataset are converted to a matrix. The column names are
 stored in a separte list item
 }
 \examples{
-oneDataSet(data.frame(x=1:5, y=LETTERS[1:5]))
+separateDataFrame(data.frame(x=1:5, y=LETTERS[1:5]))
 }
 
