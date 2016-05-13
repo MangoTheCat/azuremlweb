@@ -24,15 +24,10 @@
 #'                auth = "TVPYGwNeuZbQLWHjOEKzMWjVihThTcmsIdRRFkSsvHaFoxZcKTjdFmFPaIsfN+OEdoZlGttMJQrzUPOvvLeCej==")
 #' }
 requestService <- function(datasets, url = NULL, region = "ussouthcentral",
-                           workspace, service, auth = NULL, details = TRUE) {
-
-  # Checks
-  stopifnot(is.logical(details))
-  details <- ifelse(details, "true", "false")
+                           workspace=NULL, service=NULL, auth = NULL, details = TRUE) {
 
   if(is.null(url)) {
-    url <- paste0("https://", region, ".services.azureml.net/workspaces/",
-                  workspace, "/services/", service, "/execute?api-version=2.0&details=", details)
+    url <- buildURL(region, workspace, service, details)
   }
 
   if (length(datasets) != 1) stop("Only setup for one dataset right now")

@@ -4,8 +4,8 @@
 \alias{requestService}
 \title{Make a POST request to AzureML service}
 \usage{
-requestService(datasets, url = NULL, region = "ussouthcentral", workspace,
-  service, auth = NULL, details = TRUE)
+requestService(datasets, url = NULL, region = "ussouthcentral",
+  workspace = NULL, service = NULL, auth = NULL, details = TRUE)
 }
 \arguments{
 \item{datasets}{A named list of data frames to send to the web service.
