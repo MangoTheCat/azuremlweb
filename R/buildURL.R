@@ -1,9 +1,9 @@
 #' Build an AzureML service URL from workspace info
 #'
-#' @param region
-#' @param workspace
-#' @param service
-#' @param details
+#' @param region The Azure region, such as ussouthcentral, europewest
+#' @param workspace The workspace ID
+#' @param service The service ID
+#' @param details Logical. Should be TRUE for now
 #'
 #' @return the url as a character
 #' @export

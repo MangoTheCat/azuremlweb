@@ -7,7 +7,13 @@
 buildURL(region, workspace, service, details = TRUE)
 }
 \arguments{
-\item{details}{}
+\item{region}{The Azure region, such as ussouthcentral, europewest}
+
+\item{workspace}{The workspace ID}
+
+\item{service}{The service ID}
+
+\item{details}{Logical. Should be TRUE for now}
 }
 \value{
 the url as a character
