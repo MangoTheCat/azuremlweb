@@ -5,6 +5,8 @@
 
 Call an AzureML web service from R
 
+Please please be careful with your API tokens (the numbers below are randomly generated to look like what you get with an Azure service)
+
 ```r
 # Use your numbers (below are not real numbers)
 # Be careful where you put your auth tokens
