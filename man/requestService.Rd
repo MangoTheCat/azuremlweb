@@ -4,10 +4,13 @@
 \alias{requestService}
 \title{Make a POST request to AzureML service}
 \usage{
-requestService(newdata, url = NULL, region = "ussouthcentral", workspace,
+requestService(datasets, url = NULL, region = "ussouthcentral", workspace,
   service, auth = NULL, details = TRUE)
 }
 \arguments{
+\item{datasets}{A named list of data frames to send to the web service.
+The names must match the names of the web inputs in Azure, eg. list(WebInput = data.frame(x=1, y=2))}
+
 \item{url}{If you supply the full URL then other options are not required}
 
 \item{region}{The Azure region, such as ussouthcentral, europewest}
@@ -21,9 +24,6 @@ check your .Rhistory}
 
 \item{details}{Logical. If FALSE then column types are omitted from the
 response}
-
-\item{datasets}{A named list of data frames to send to the web service.
-The names must match the names of the web inputs in Azure, eg. list(WebInput = data.frame(x=1, y=2))}
 }
 \value{
 An httr response object

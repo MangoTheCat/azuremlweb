@@ -23,7 +23,7 @@
 #'                service = "4e7ebd7ad816cd9dd1cb1b17c4cdb0c7",
 #'                auth = "TVPYGwNeuZbQLWHjOEKzMWjVihThTcmsIdRRFkSsvHaFoxZcKTjdFmFPaIsfN+OEdoZlGttMJQrzUPOvvLeCej==")
 #' }
-requestService <- function(newdata, url = NULL, region = "ussouthcentral",
+requestService <- function(datasets, url = NULL, region = "ussouthcentral",
                            workspace, service, auth = NULL, details = TRUE) {
 
   # Checks
