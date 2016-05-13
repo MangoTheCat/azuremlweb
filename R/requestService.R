@@ -31,11 +31,11 @@ requestService <- function(datasets, url = NULL, region = "ussouthcentral",
   details <- ifelse(details, "true", "false")
 
   if(is.null(url)) {
-    url <- paste0("https://", region, ".services.azureml.net/workspaces",
+    url <- paste0("https://", region, ".services.azureml.net/workspaces/",
                   workspace, "/services/", service, "/execute?api-version=2.0&details=", details)
   }
 
-  if (length(datasets != 1)) stop("Only setup for one dataset right now")
+  if (length(datasets) != 1) stop("Only setup for one dataset right now")
 
   # Build the request list. The names must match the names of the web inputs in Azure
   req <- buildRequestList(datasets)
@@ -45,13 +45,11 @@ requestService <- function(datasets, url = NULL, region = "ussouthcentral",
     if(auth=="") {
       stop("Either set the AZUREML_APIKEY environment variable or pass auth token")
     }
-    auth <- paste("Bearer", auth, sep = " ")
   }
+  auth <- paste("Bearer", auth, sep = " ")
 
   resp <- httr::POST(url = url, body = req, encode = "json",
                      httr::add_headers("Authorization" = auth,
                                        "Content-Type" = "application/json"))
-
   resp
-
 }
