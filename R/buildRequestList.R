@@ -15,13 +15,25 @@ buildRequestList <- function(datasets) {
   values <- as.matrix(datasets[[1]])
   dimnames(values) <- NULL
 
-  InputList <- list(names(datasets[[1]]), values)
-  names(InputList) <- c(names(datasets)[1], "Values")
-
-  req <- list(
-    Inputs = InputList
-  )
-
+  req <- list(Inputs = lapply(datasets, separateDataSet))
   req
+}
 
+#' Separate a dataset into the list structure required for the POST request
+#'
+#' The values of the dataset are converted to a matrix. The column names are
+#' stored in a separte list item
+#'
+#' @param dataset A data.frame
+#'
+#' @return list with the ColumnNames (char vector) and Values (char matrix)
+#'
+#' @examples
+#' oneDataSet(data.frame(x=1:5, y=LETTERS[1:5]))
+separateDataFrame <- function(dataset) {
+  values <- as.matrix(dataset)
+  dimnames(values) <- NULL
+
+  list(ColumnNames=names(dataset),
+       Values = values)
 }
