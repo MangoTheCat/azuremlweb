@@ -16,5 +16,13 @@ resp <-  requestService(list(WebInput = data.frame(x=1:5, y=LETTERS[1:5])),
                 
 httr::content(resp)
 ```
+OR
+
+```r
+resp <-  requestService(list(WebInput = data.frame(x=1:5, y=LETTERS[1:5])),
+                url = "https://ussouthcentral.services.azureml.net/workspaces/8550bbba99572fc47e18e5fdd53e43e2/services/4e7ebd7ad816cd9dd1cb1b17c4cdb0c7/execute?api-version=2.0&details=true",
+                auth = "YTHDwNeuZbQLWHjOEKzMWjVihThTcmsIdRRFkSsvHaFoxZcKTjdFmFPaIsfN+OEdoZlGttMJQrzUPOvvLeCej==")
+
+```
 
 The content parser is coming [#1](https://github.com/MangoTheCat/azuremlweb/issues/1)
