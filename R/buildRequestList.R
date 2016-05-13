@@ -15,7 +15,7 @@ buildRequestList <- function(datasets) {
   values <- as.matrix(datasets[[1]])
   dimnames(values) <- NULL
 
-  req <- list(Inputs = lapply(datasets, separateDataSet))
+  req <- list(Inputs = lapply(datasets, separateDataFrame))
   req
 }
 
