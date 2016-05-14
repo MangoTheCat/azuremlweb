@@ -30,8 +30,6 @@ makeRequest <- function(datasets, url = NULL, region = "ussouthcentral",
     url <- buildURL(region, workspace, service, details)
   }
   
-  if (length(datasets) != 1) stop("Only setup for one dataset right now")
-  
   # Build the request list. The names must match the names of the web inputs in Azure
   req <- buildRequestList(datasets)
   
