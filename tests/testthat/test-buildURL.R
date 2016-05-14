@@ -1,4 +1,4 @@
-context("URL Tests")
+context("Request URL")
 
 test_that("Calling the right URL", {
 
