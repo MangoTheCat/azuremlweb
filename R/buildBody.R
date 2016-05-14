@@ -1,5 +1,5 @@
 
-#' Build request list
+#' Build the body of the request
 #'
 #' @param datasets A named list of data frames to send to the web service.
 #' The names must match the names of the web inputs in Azure, eg. list(WebInput = data.frame(x=1, y=2))
