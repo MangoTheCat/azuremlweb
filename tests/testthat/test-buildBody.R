@@ -2,6 +2,8 @@ context("Request body")
 
 test_that("Multiple inputs work", {
   
+  data("allsorts")
+  
   expect_equal(buildBody(list(Input1=data.frame(Month = 4, OriginAirportID = 14122, Carrier = "AS"),
                               Input2=allsorts)),
                
