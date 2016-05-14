@@ -2,6 +2,7 @@
 
 export(buildRequestList)
 export(buildURL)
+export(makeRequest)
 export(parseDataFrame)
 export(parseResponse)
 export(requestService)
