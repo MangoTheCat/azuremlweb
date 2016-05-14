@@ -26,5 +26,14 @@
 azuremlService <- function(datasets, url = NULL, region = "ussouthcentral",
                            workspace=NULL, service=NULL, auth = NULL, details = TRUE) {
 
+  # Make the request
+  resp <- makeRequest(datasets = datasets, url = url, region = region,
+                      workspace = workspace, service = service, auth = auth,
+                      details = details)
+  
+  # Report errors?
+  
+  # Parse the response
+  parseResponse(resp)
  
 }
