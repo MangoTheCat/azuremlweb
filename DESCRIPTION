@@ -1,13 +1,12 @@
 Package: azuremlweb
-Title: What the Package Does (one line, title case)
+Title: Call an AzureML web service
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: person("Douglas", "Ashton", email = "dashton@mango-solutions.com", role = c("aut", "cre"))
+Description: Makes it easier to test out a new AzureML web service. This package helps you make a POST request to an AzureML API and parse the response back into R data frames.
 Depends:
     R (>= 3.0.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Imports:
     httr
 RoxygenNote: 5.0.1
