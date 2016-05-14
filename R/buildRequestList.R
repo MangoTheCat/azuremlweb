@@ -8,8 +8,8 @@
 #' @export
 #'
 #' @examples
-#' buildRequestList(list(WebInput = data.frame(x=1:5, y=LETTERS[1:5])))
-buildRequestList <- function(datasets) {
+#' buildBody(list(WebInput = data.frame(x=1:5, y=LETTERS[1:5])))
+buildBody <- function(datasets) {
 
 
   values <- as.matrix(datasets[[1]])

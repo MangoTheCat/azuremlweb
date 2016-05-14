@@ -31,7 +31,7 @@ makeRequest <- function(datasets, url = NULL, region = "ussouthcentral",
   }
   
   # Build the request list. The names must match the names of the web inputs in Azure
-  req <- buildRequestList(datasets)
+  req <- buildBody(datasets)
   
   if(is.null(auth)) {
     auth <- Sys.getenv("AZUREML_APIKEY")
