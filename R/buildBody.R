@@ -32,9 +32,22 @@ buildBody <- function(datasets) {
 #' @examples
 #' separateDataFrame(data.frame(x=1:5, y=LETTERS[1:5]))
 separateDataFrame <- function(dataset) {
-  values <- as.matrix(dataset)
+  # Might need to pass options to charConvertColumn
+  values <- do.call("cbind", lapply(dataset, charConvertColumn))
   dimnames(values) <- NULL
 
   list(ColumnNames=names(dataset),
        Values = values)
+}
+
+#' Controlled conversion of vectors to characer vectors
+#'
+#' @param x A vector
+#'
+#' @return Character vector
+#' 
+charConvertColumn <- function(x) {
+  switch(class(x)[1],
+         "POSIXct" = format(x, "%Y-%m-%d %H:%M:%S %Z"),
+         as.character(x))
 }
